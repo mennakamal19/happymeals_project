@@ -1,0 +1,31 @@
+Fluttertoast.showToast(msg:e.toString(), toastLength: Toast.LENGTH_SHORT, gravity: ToastGravity.BOTTOM,);
+onPressed: () =>Navigator.pop(context)
+Navigator.push(context, MaterialPageRoute(builder: (ctx)=>SupportChat()));
+HexColor('#68B2A0')
+color: Theme.of(context).accentColor
+// user defult image
+https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQtYyNP9njaEeggRjQ5MjX2PrJy1OHkN_o-FA&usqp=CAU
+
+
+https://www.thebuffaloburger.com/images/storry.png
+ Container(
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20)
+                          ),
+
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        child: Text(widget.list['delivery_time'],
+                          style: TextStyle(
+                              fontFamily: '',
+                              fontSize: 12.0,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+
+NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQtYyNP9njaEeggRjQ5MjX2PrJy1OHkN_o-FA&usqp=CAU'),
