@@ -33,7 +33,7 @@ class _RestaurantsState extends State<Restaurants> {
                     child: InkWell(
                       //onTap: () =>Navigator.push(context, MaterialPageRoute(builder: (ctx)=>SearchDetails())),
                       child: TextField(
-                        cursorColor:Theme.of(context).accentColor,
+                        cursorColor:Theme.of(context).colorScheme.secondary,
                         decoration: InputDecoration(
                             contentPadding: EdgeInsets.all(8),
                             hintText: 'Search',
@@ -50,7 +50,7 @@ class _RestaurantsState extends State<Restaurants> {
                   ),
                 ),
                 IconButton(icon: Icon(Icons.sort,
-                    color: Theme.of(context).accentColor),
+                    color: Theme.of(context).colorScheme.secondary),
                   onPressed: ()
 
                   {
@@ -74,7 +74,7 @@ class _RestaurantsState extends State<Restaurants> {
                         child: Text(
                           'Popular Choices',
                           style: TextStyle(
-                              color: Theme.of(context).accentColor,
+                              color: Theme.of(context).colorScheme.secondary,
                               fontSize: 18.0,
                               fontFamily: 'Roboto'
                           ),
@@ -108,7 +108,7 @@ class _RestaurantsState extends State<Restaurants> {
                         child: Text(
                           'New Restaurants',
                           style: TextStyle(
-                            color: Theme.of(context).accentColor,
+                            color: Theme.of(context).colorScheme.secondary,
                             fontSize: 18.0,
                             fontFamily: 'Roboto',
                           ),
@@ -172,13 +172,13 @@ class _RestaurantsState extends State<Restaurants> {
               ),
               SizedBox(width: 7.0,),
               Icon(Icons.star,
-                color: Theme.of(context).accentColor,
+                color: Theme.of(context).colorScheme.secondary,
                 size: 12.0,
               ),
               Text(
                 '4.9',
                 style: TextStyle(
-                    color: Theme.of(context).accentColor
+                    color: Theme.of(context).colorScheme.secondary
                 ),
               ),
             ],
@@ -228,14 +228,14 @@ class _RestaurantsState extends State<Restaurants> {
                     children:<Widget> [
                       Icon(
                         Icons.star,
-                        color: Theme.of(context).accentColor,
+                        color: Theme.of(context).colorScheme.secondary,
                         size: 14,
                       ),
                       SizedBox(width: 2,),
                       Text(
                           list['rate'],
                           style: TextStyle(
-                            color: Theme.of(context).accentColor,
+                            color: Theme.of(context).colorScheme.secondary,
                           )
                       ),
                     ],

@@ -27,7 +27,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
           children:<Widget> [
             Text('Forget password',
               style: TextStyle(
-                  color: Theme.of(context).accentColor,
+                  color: Theme.of(context).colorScheme.secondary,
                   fontSize: 25.0
               ),
             ),
@@ -42,7 +42,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
               key: _useremail,
               child: TextFormField(
                   controller: emailTextController,
-                  cursorColor: Theme.of(context).accentColor,
+                  cursorColor: Theme.of(context).colorScheme.secondary,
                   decoration: InputDecoration(
                       hintText: 'Email',
                       fillColor: Colors.white,
@@ -67,7 +67,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
             Container(
               width: double.infinity,
               decoration: BoxDecoration(
-                  color: Theme.of(context).accentColor,
+                  color: Theme.of(context).colorScheme.secondary,
                   borderRadius: BorderRadius.circular(50.0)
               ),
               clipBehavior: Clip.antiAliasWithSaveLayer,

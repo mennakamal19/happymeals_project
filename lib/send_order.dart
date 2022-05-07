@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:happymeals_project/home.dart';
 import 'package:happymeals_project/track_your_order.dart';
@@ -49,7 +49,7 @@ class _SendOrderState extends State<SendOrder> {
               children:<Widget> [
                 Expanded(
                     child: Text('64 zahraa nasr city,\ncairo,Egypt',style: TextStyle(fontWeight: FontWeight.bold),)),
-                Text('Change',style: TextStyle(color: Theme.of(context).accentColor),)
+                Text('Change',style: TextStyle(color: Theme.of(context).colorScheme.secondary),)
               ],
             ),
             Padding(
@@ -60,7 +60,7 @@ class _SendOrderState extends State<SendOrder> {
               children:<Widget> [
                 Expanded(
                   child: Text('Payment Method'),),
-                Text('Add +',style: TextStyle(color: Theme.of(context).accentColor),),
+                Text('Add +',style: TextStyle(color: Theme.of(context).colorScheme.secondary),),
               ],
             ),
             SizedBox(height: 10),
@@ -74,7 +74,7 @@ class _SendOrderState extends State<SendOrder> {
               clipBehavior: Clip.antiAliasWithSaveLayer,
               child: Row(
                 children:<Widget> [
-                  Icon(Icons.payment_rounded,color: Theme.of(context).accentColor),
+                  Icon(Icons.payment_rounded,color: Theme.of(context).colorScheme.secondary),
                   SizedBox(width: 10,),
                   Text('**** **** **** 1233'),
                 ],
@@ -91,7 +91,7 @@ class _SendOrderState extends State<SendOrder> {
               clipBehavior: Clip.antiAliasWithSaveLayer,
               child: Row(
                 children:<Widget> [
-                  Icon(Icons.payments_rounded,color: Theme.of(context).accentColor),
+                  Icon(Icons.payments_rounded,color: Theme.of(context).colorScheme.secondary),
                   SizedBox(width: 10,),
                   Text('mennakk@gmail.com'),
                 ],
@@ -102,7 +102,7 @@ class _SendOrderState extends State<SendOrder> {
               children:<Widget> [
                 Expanded(
                   child: Text('Enter Coupon'),),
-                Text('HUNGRY10',style: TextStyle(color: Theme.of(context).accentColor),),
+                Text('HUNGRY10',style: TextStyle(color: Theme.of(context).colorScheme.secondary),),
               ],
             ),
             Padding(
@@ -150,7 +150,7 @@ class _SendOrderState extends State<SendOrder> {
                   child: Text('Total'
                   ),
                 ),
-                Text(finalTotal+' Eg',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Theme.of(context).accentColor),)
+                Text(finalTotal+' Eg',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Theme.of(context).colorScheme.secondary),)
               ],
             ),
             Spacer(),
@@ -160,7 +160,7 @@ class _SendOrderState extends State<SendOrder> {
                 width: double.infinity,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(50.0),
-                  color:Theme.of(context).accentColor,
+                  color:Theme.of(context).colorScheme.secondary,
                 ),
                 clipBehavior: Clip.antiAliasWithSaveLayer,
                 child: TextButton(
@@ -216,7 +216,7 @@ class _SendOrderState extends State<SendOrder> {
               children:<Widget> [
                 Image.network('https://www.iconninja.com/files/989/602/415/yes-circle-mark-check-correct-tick-success-icon.png'),
                 Text('Thank you for\nyour order.',textAlign:TextAlign.center,style: TextStyle(
-                  fontWeight: FontWeight.bold,fontSize: 18,color: Theme.of(context).accentColor,
+                  fontWeight: FontWeight.bold,fontSize: 18,color: Theme.of(context).colorScheme.secondary,
                 ),),
                 SizedBox(height: 15,),
                 Text('you can track the delivery in\nthe"Order section".',textAlign:TextAlign.center,style: TextStyle(
@@ -227,7 +227,7 @@ class _SendOrderState extends State<SendOrder> {
                   width: double.infinity,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20.0),
-                    color: Theme.of(context).accentColor,
+                    color: Theme.of(context).colorScheme.secondary,
                   ),
                   clipBehavior: Clip.antiAliasWithSaveLayer,
                   child: TextButton(
@@ -246,7 +246,7 @@ class _SendOrderState extends State<SendOrder> {
                   width: double.infinity,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20.0),
-                    color: Theme.of(context).accentColor,
+                    color: Theme.of(context).colorScheme.secondary,
                   ),
                   clipBehavior: Clip.antiAliasWithSaveLayer,
                   child: TextButton(

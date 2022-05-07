@@ -38,7 +38,7 @@ class _CreateAccountState extends State<CreateAccount>
               child: Text('Create your\naccount',
                 style: TextStyle(
                   fontSize: 24.0,
-                  color: Theme.of(context).accentColor,
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
               ),
             ),
@@ -54,12 +54,12 @@ class _CreateAccountState extends State<CreateAccount>
                     children:<Widget> [
                       TextFormField(
                           controller: userNameController,
-                          cursorColor: Theme.of(context).accentColor,
+                          cursorColor: Theme.of(context).colorScheme.secondary,
                           decoration: InputDecoration(
                               hintText: 'username',
                               fillColor: Colors.white,
                               filled: true,
-                              contentPadding: EdgeInsets.all(12.0),
+                              contentPadding: const EdgeInsets.all(12.0),
                               border: OutlineInputBorder(
                                   borderSide: BorderSide.none,
                                   borderRadius: BorderRadius.circular(50)
@@ -76,7 +76,7 @@ class _CreateAccountState extends State<CreateAccount>
                       SizedBox(height: 10.0),
                       TextFormField(
                           controller: userEmailController,
-                          cursorColor: Theme.of(context).accentColor,
+                          cursorColor: Theme.of(context).colorScheme.secondary,
                           decoration: InputDecoration(
                             hintText: 'Email',
                             fillColor: Colors.white,
@@ -100,7 +100,7 @@ class _CreateAccountState extends State<CreateAccount>
                       TextFormField(
                           controller: userPasswordController,
                           obscureText: true,
-                          cursorColor: Theme.of(context).accentColor,
+                          cursorColor: Theme.of(context).colorScheme.secondary,
                           decoration: InputDecoration(
                               hintText: 'Password',
                               fillColor: Colors.white,
@@ -122,7 +122,7 @@ class _CreateAccountState extends State<CreateAccount>
                       SizedBox(height: 10.0,),
                       TextFormField(
                           controller: userPhoneController,
-                          cursorColor:Theme.of(context).accentColor,
+                          cursorColor:Theme.of(context).colorScheme.secondary,
                           decoration: InputDecoration(
                               hintText: 'Phone',
                               fillColor: Colors.white,
@@ -152,7 +152,7 @@ class _CreateAccountState extends State<CreateAccount>
               child: Container(
                 width: double.infinity,
                 decoration: BoxDecoration(borderRadius: BorderRadius.circular(40.0),
-                    color: Theme.of(context).accentColor
+                    color: Theme.of(context).colorScheme.secondary
                 ),
                 child: TextButton(
                   onPressed: ()
@@ -202,7 +202,7 @@ class _CreateAccountState extends State<CreateAccount>
                       {
                         Navigator.push(context, MaterialPageRoute(builder: (ctx)=>Login()));
                       },
-                      child: Text('Log in',style: TextStyle(color: Theme.of(context).accentColor),)),
+                      child: Text('Log in',style: TextStyle(color: Theme.of(context).colorScheme.secondary),)),
                 ],
               ),
             )

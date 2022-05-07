@@ -24,7 +24,7 @@ class _IntroScreenState extends State<IntroScreen>
           pathImage:'images/bestintro.jpg',
           title: 'Find foods you love',
           styleTitle: TextStyle(
-              color: Theme.of(context).accentColor,fontSize: 25.0,fontFamily: 'Roboto'
+              color: Theme.of(context).colorScheme.secondary,fontSize: 25.0,fontFamily: 'Roboto'
           ),
           description: 'Discover the best foods form over 1,000 restaurants',
           styleDescription: TextStyle(
@@ -38,7 +38,7 @@ class _IntroScreenState extends State<IntroScreen>
           pathImage:'images/bestfastdelivery.jpg',
           title: 'Fast Delivery',
           styleTitle: TextStyle(
-              color: Theme.of(context).accentColor,fontSize: 25.0,fontFamily: 'Roboto'
+              color: Theme.of(context).colorScheme.secondary,fontSize: 25.0,fontFamily: 'Roboto'
           ),
           description:'Fast delivery to your home, office and wherever you are',
           styleDescription: TextStyle(
@@ -48,11 +48,11 @@ class _IntroScreenState extends State<IntroScreen>
         )
     );
     slides.add(
-      new Slide(
+       Slide(
         pathImage: 'images/location.jpg',
         title:'Live Tracking' ,
         styleTitle: TextStyle(
-            color: Theme.of(context).accentColor,fontSize: 25.0,fontFamily: 'Roboto'
+            color: Theme.of(context).colorScheme.secondary,fontSize: 25.0,fontFamily: 'Roboto'
         ),
         description:'Real time tracking of your food on the app after ordered',
         styleDescription: TextStyle(
@@ -77,7 +77,7 @@ class _IntroScreenState extends State<IntroScreen>
                 padding: const EdgeInsets.all(8.0),
                 child: Text('Log in',
                   style: TextStyle(
-                      color: Theme.of(context).accentColor,
+                      color: Theme.of(context).colorScheme.secondary,
                     fontSize: 16.0
                   ),
                 ),
@@ -96,7 +96,7 @@ class _IntroScreenState extends State<IntroScreen>
             child:
             IntroSlider(
               slides: this.slides,
-              colorActiveDot: Theme.of(context).accentColor,
+              colorActiveDot: Theme.of(context).colorScheme.secondary,
               colorDot: Colors.grey,
               sizeDot: 10.0,
               showNextBtn: false,
@@ -110,7 +110,7 @@ class _IntroScreenState extends State<IntroScreen>
               width: double.infinity,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(50.0),
-                  color: Theme.of(context).accentColor,
+                  color: Theme.of(context).colorScheme.secondary,
               ),
               clipBehavior: Clip.antiAliasWithSaveLayer,
               child: TextButton(

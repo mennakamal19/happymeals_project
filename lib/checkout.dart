@@ -30,16 +30,16 @@ class _CheckOutState extends State<CheckOut> {
           backgroundColor: Colors.transparent,
           titleSpacing: 0.0,
           leading: IconButton(onPressed: () {Navigator.pop(context);},
-            icon: Icon(Icons.arrow_back_ios_rounded,
+            icon: const Icon(Icons.arrow_back_ios_rounded,
               color: Colors.black,size: 18,),
           ),
-          title: Text('My Order',
+          title: const Text('My Order',
             style: TextStyle(
                 color: Colors.black,fontSize: 16
             ),
           ),
         ),
-        body:myBasket.length!=0? Padding(
+        body:myBasket.isNotEmpty? Padding(
           padding: const EdgeInsets.all(12.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -53,13 +53,13 @@ class _CheckOutState extends State<CheckOut> {
                     clipBehavior: Clip.antiAliasWithSaveLayer,
                     child:Image.asset(widget.list['image'],width: 80,height: 90,fit: BoxFit.cover,),
                   ),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children:<Widget> [
-                      Text(widget.list['name'],style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
+                      Text(widget.list['name'],style: const TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
                       Text(widget.list['type'],
-                        style: TextStyle(
+                        style: const TextStyle(
                             color: Colors.grey
                         ),
                       ),
@@ -67,13 +67,13 @@ class _CheckOutState extends State<CheckOut> {
                         children:<Widget> [
                           Icon(
                             Icons.star,
-                            color: Theme.of(context).accentColor,
+                            color: Theme.of(context).colorScheme.secondary,
                             size: 15,
                           ),
-                          SizedBox(width: 3,),
-                          Text(widget.list['rate'],style: TextStyle(fontSize: 13
+                          const SizedBox(width: 3,),
+                          Text(widget.list['rate'],style: const TextStyle(fontSize: 13
                           ),),
-                          Text('(124 ratings)',
+                          const Text('(124 ratings)',
                             style: TextStyle(
                                 color: Colors.grey,
                                 fontSize: 13
@@ -85,12 +85,12 @@ class _CheckOutState extends State<CheckOut> {
                         children:<Widget> [
                           Icon(
                             Icons.location_on_rounded,
-                            color: Theme.of(context).accentColor,
+                            color: Theme.of(context).colorScheme.secondary,
                             size: 14,
                           ),
-                          SizedBox(width: 3,),
+                          const SizedBox(width: 3,),
                           Text(widget.list['location'],
-                            style: TextStyle(
+                            style: const TextStyle(
                                 color: Colors.grey,
                                 fontSize: 13
                             ),
@@ -101,7 +101,7 @@ class _CheckOutState extends State<CheckOut> {
                   ),
                 ],
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Container(
                 decoration: BoxDecoration(
                     color: Colors.grey[100]
@@ -118,38 +118,38 @@ class _CheckOutState extends State<CheckOut> {
                     ),
                     Text('Add more foods',
                       style: TextStyle(
-                          color: Theme.of(context).accentColor
+                          color: Theme.of(context).colorScheme.secondary
                       ),
                     ),
-                    SizedBox(height: 10)
+                    const SizedBox(height: 10)
                   ],
                 ),
               ),
-              Spacer(),
+              const Spacer(),
               Row(
                 children:<Widget> [
-                  Expanded(child: Text('Delivery instructions')),
+                  const Expanded(child: const Text('Delivery instructions')),
                   Text('Add notes +',style: TextStyle(color: HexColor('#68B2A0')),),
                 ],
               ),
-              SizedBox(height: 4,),
+              const SizedBox(height: 4,),
               Row(
                 children:<Widget> [
-                  Expanded(
+                  const Expanded(
                     child: Text('Subtotal'
                     ),
                   ),
-                  Text(subTotal + ' Eg',style: TextStyle(fontWeight: FontWeight.bold),)
+                  Text(subTotal + ' Eg',style: const TextStyle(fontWeight: FontWeight.bold),)
                 ],
               ),
-              SizedBox(height: 4,),
+              const SizedBox(height: 4,),
               Row(
                 children:<Widget> [
-                  Expanded(
+                  const Expanded(
                     child: Text('Delivery cost'
                     ),
                   ),
-                  Text(widget.list['delivery_cost']+ ' Eg',style: TextStyle(fontWeight: FontWeight.bold),)
+                  Text(widget.list['delivery_cost']+ ' Eg',style: const TextStyle(fontWeight: FontWeight.bold),)
                 ],
               ),
               Padding(
@@ -158,7 +158,7 @@ class _CheckOutState extends State<CheckOut> {
                   width: double.infinity,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(50.0),
-                    color: Theme.of(context).accentColor,
+                    color: Theme.of(context).colorScheme.secondary,
                   ),
                   clipBehavior: Clip.antiAliasWithSaveLayer,
                   child: TextButton(
@@ -167,7 +167,7 @@ class _CheckOutState extends State<CheckOut> {
                         Navigator.push(context, MaterialPageRoute(builder: (ctx)=>SendOrder(total: subTotal,delivery_cost: widget.list['delivery_cost'],)));
                       });
                     },
-                    child: Text('Check out',
+                    child: const Text('Check out',
                       style: TextStyle(
                           color: Colors.white
                       ),
@@ -177,7 +177,7 @@ class _CheckOutState extends State<CheckOut> {
               ),
             ],
           ),
-        ):Center(child: CircularProgressIndicator())
+        ):const Center(child: const CircularProgressIndicator())
     );
   }
   Widget orderItem(List myBasket, int idx)=>Padding(
@@ -185,9 +185,9 @@ class _CheckOutState extends State<CheckOut> {
     child: Row(
       children:<Widget> [
         Text(myBasket[idx]['name']),
-        SizedBox(width: 3,),
-        Text('X '+'1'),
-        Spacer(),
+        const SizedBox(width: 3,),
+        const Text('X '+'1'),
+        const Spacer(),
         Text(myBasket[idx]['price']+' Eg'),
       ],
     ),
@@ -197,9 +197,10 @@ class _CheckOutState extends State<CheckOut> {
     crossAxisAlignment: CrossAxisAlignment.center,
     children:<Widget> [
       Image.network('https://potenzaglobalsolution.files.wordpress.com/2015/07/ecommerce.png'),
-      Text('Your basket is empty',style: TextStyle(color: Theme.of(context).accentColor,fontWeight: FontWeight.bold,fontSize: 16),),
-      SizedBox(height: 20),
-      Text('Make your basket happy and\nadd foods to it',textAlign: TextAlign.center,)
+      Text('Your basket is empty',style: TextStyle(color: Theme.of(context).colorScheme.secondary,fontWeight: FontWeight.bold,fontSize: 16),),
+      const SizedBox(height: 20),
+      const Text('Make your basket happy and\nadd foods to it',
+        textAlign: TextAlign.center,)
     ],
   );
   getBasketItems()

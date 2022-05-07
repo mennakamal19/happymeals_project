@@ -30,7 +30,7 @@ class _SupportState extends State<Support> {
               child: Padding(
                 padding: const EdgeInsets.only(top:8.0),
                 child: TextField(
-                  cursorColor:Theme.of(context).accentColor,
+                  cursorColor:Theme.of(context).colorScheme.secondary,
                   decoration: InputDecoration(
                       contentPadding: EdgeInsets.all(8),
                       hintText: 'Search',
@@ -58,7 +58,7 @@ class _SupportState extends State<Support> {
                         children:<Widget> [
                           Text('Live chat with\nour support',
                             style: TextStyle(
-                                color: Theme.of(context).accentColor,
+                                color: Theme.of(context).colorScheme.secondary,
                                 fontWeight: FontWeight.bold,fontSize: 18
                             ),
                           ),
@@ -67,7 +67,7 @@ class _SupportState extends State<Support> {
                             height: 30,
                             width: 70,
                             decoration: BoxDecoration(
-                                color: Theme.of(context).accentColor,
+                                color: Theme.of(context).colorScheme.secondary,
                                 borderRadius: BorderRadius.circular(20)
                             ),
                             child: TextButton(

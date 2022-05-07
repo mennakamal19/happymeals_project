@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:happymeals_project/login.dart';
-import 'package:happymeals_project/setting.dart';
 import 'package:happymeals_project/support_center.dart';
 import 'package:happymeals_project/update_account.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -156,11 +155,11 @@ class _AccountState extends State<Account>
                             'Settings'
                         ),
                       ),
-                      IconButton(
-                        icon: Icon(Icons.keyboard_arrow_right,
-                          color: Colors.black,), onPressed: () =>Navigator.push(context, MaterialPageRoute(builder: (ctx)=>Setting())
-                      ),
-                      )
+                      // IconButton(
+                      //   icon: Icon(Icons.keyboard_arrow_right,
+                      //     color: Colors.black,), onPressed: () =>Navigator.push(context, MaterialPageRoute(builder: (ctx)=>Setting())
+                      // ),
+                      // )
                     ],
                   ),
                   Divider(

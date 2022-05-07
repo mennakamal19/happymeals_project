@@ -9,7 +9,7 @@ class _OffersState extends State<Offers> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).accentColor,
+      backgroundColor: Theme.of(context).colorScheme.secondary,
       body:
       SingleChildScrollView(
         child: Column(
@@ -106,14 +106,14 @@ class _OffersState extends State<Offers> {
         Row(
           children:<Widget> [
             Icon(Icons.star,
-              color: Theme.of(context).accentColor,
+              color: Theme.of(context).colorScheme.secondary,
               size: 18.0,
             ),
             SizedBox(width: 5.0,),
             Text(
               '4.9',
               style: TextStyle(
-                color: Theme.of(context).accentColor,
+                color: Theme.of(context).colorScheme.secondary,
               ),
             ),
             Text(

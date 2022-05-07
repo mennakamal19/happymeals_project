@@ -56,9 +56,9 @@ class _TrackOrderState extends State<TrackOrder> {
             SizedBox(height: 50),
             Row(
               children: [
-                Icon(Icons.circle,size: 16,color: Theme.of(context).accentColor),
+                Icon(Icons.circle,size: 16,color: Theme.of(context).colorScheme.secondary),
                 SizedBox(width: 15,),
-                Text('Order confirmed',style: TextStyle(color: Theme.of(context).accentColor),)
+                Text('Order confirmed',style: TextStyle(color: Theme.of(context).colorScheme.secondary),)
               ],
             ),
             SizedBox(height: 20,),

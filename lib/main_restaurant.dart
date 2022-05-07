@@ -1,9 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:happymeals_project/checkout.dart';
-import 'package:hexcolor/hexcolor.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 class MainRestaurant extends StatefulWidget
 {
@@ -36,7 +34,7 @@ class _MainRestaurantState extends State<MainRestaurant> {
         width: 330,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20.0),
-          color: HexColor('#68B2A0'),
+          color: Theme.of(context).colorScheme.secondary,
         ),
         clipBehavior: Clip.antiAliasWithSaveLayer,
         child: TextButton(
@@ -50,7 +48,7 @@ class _MainRestaurantState extends State<MainRestaurant> {
           ),
         ),
       ),
-      backgroundColor: Theme.of(context).accentColor,
+      backgroundColor: Theme.of(context).colorScheme.secondary,
       appBar: AppBar(
         leading: IconButton(icon: Icon(
           Icons.keyboard_arrow_left,color: Colors.white,),
@@ -82,7 +80,7 @@ class _MainRestaurantState extends State<MainRestaurant> {
                       children:<Widget> [
                         Text(widget.list['name'],
                           style: TextStyle(
-                              color: Theme.of(context).accentColor,
+                              color: Theme.of(context).colorScheme.secondary,
                               fontSize: 20.0
                           ),
                         ),
@@ -95,7 +93,7 @@ class _MainRestaurantState extends State<MainRestaurant> {
                       children:<Widget> [
                         Icon(
                           Icons.star,
-                          color: Theme.of(context).accentColor,size: 16,
+                          color: Theme.of(context).colorScheme.secondary,size: 16,
                         ),
                         Text(widget.list['rate']+'(124 ratings) '+widget.list['type'],
                           style: TextStyle(
@@ -112,7 +110,7 @@ class _MainRestaurantState extends State<MainRestaurant> {
                       children:<Widget> [
                         Icon(
                           Icons.location_on,
-                          color: Theme.of(context).accentColor,size: 16,
+                          color: Theme.of(context).colorScheme.secondary,size: 16,
                         ),
                         Flexible(
                           child: Text(widget.list['location'],
@@ -234,7 +232,7 @@ class _MainRestaurantState extends State<MainRestaurant> {
                 IconButton(
                   icon: Icon(Icons.add,
                     size: 16,
-                    color: Theme.of(context).accentColor,
+                    color: Theme.of(context).colorScheme.secondary,
                   ), onPressed: () { addToBasket(food[index]);  },
                 ),
               ],

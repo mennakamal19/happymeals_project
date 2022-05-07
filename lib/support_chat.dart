@@ -51,22 +51,22 @@ class _SupportChatState extends State<SupportChat> {
                       maxLines: null,
                       controller: message,
                       style: TextStyle(decoration: TextDecoration.none),
-                      cursorColor:Theme.of(context).accentColor,
+                      cursorColor:Theme.of(context).colorScheme.secondary,
                       decoration: InputDecoration(
                         contentPadding: EdgeInsets.all(8),
                         hintText: 'Type a message',
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(16)),
-                          borderSide: BorderSide(width: 1,color: Theme.of(context).accentColor),
+                          borderSide: BorderSide(width: 1,color: Theme.of(context).colorScheme.secondary),
                         ),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.all(Radius.circular(16)),
-                            borderSide: BorderSide(width: 2,color: Theme.of(context).accentColor)
+                            borderSide: BorderSide(width: 2,color: Theme.of(context).colorScheme.secondary)
                         ),
                       ),
                     ),
                   ),
-                  IconButton(icon: Icon(Icons.near_me_rounded,color: Theme.of(context).accentColor), onPressed: ()
+                  IconButton(icon: Icon(Icons.near_me_rounded,color: Theme.of(context).colorScheme.secondary), onPressed: ()
                   {
                     sendMessage(message.text);
                     setState(() {
@@ -101,7 +101,7 @@ class _SupportChatState extends State<SupportChat> {
               ),
             ),
             decoration: BoxDecoration(
-                color: Theme.of(context).accentColor,
+                color: Theme.of(context).colorScheme.secondary,
                 borderRadius: BorderRadiusDirectional.only(
                   bottomEnd: Radius.circular(12.0),
                   bottomStart:Radius.circular(12.0),

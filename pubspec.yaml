@@ -13,19 +13,20 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
-  intro_slider: ^3.0.2
-  firebase_core: ^1.6.0
-  firebase_auth: ^3.1.0
-  cloud_firestore: ^2.5.1
-  firebase_storage: ^10.0.3
+
   shared_preferences: ^2.0.7
   fluttertoast: ^8.0.8
   syncfusion_flutter_sliders: ^19.2.59
   hexcolor: ^2.0.4
-  settings_ui: ^1.0.0
+  intro_slider: ^3.0.2
+
+  firebase_core: ^1.6.0
+  firebase_auth: ^3.1.0
+  cloud_firestore: ^2.5.1
+  firebase_storage: ^10.0.3
+
   image_picker: ^0.8.2
   permission_handler:
-  smooth_page_indicator: ^1.0.0+2
 
 dev_dependencies:
   flutter_test:
@@ -48,6 +49,8 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  assets:
+    - images/
 
   # To add assets to your application, add an assets section, like this:
   # assets:
