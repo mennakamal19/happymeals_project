@@ -18,7 +18,7 @@ dependencies:
   fluttertoast: ^8.0.8
   syncfusion_flutter_sliders: ^19.2.59
   hexcolor: ^2.0.4
-  intro_slider: ^3.0.2
+  intro_slider: ^3.0.4
 
   firebase_core: ^1.6.0
   firebase_auth: ^3.1.0

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:happymeals_project/create_account.dart';
 import 'package:happymeals_project/home.dart';
 import 'package:happymeals_project/login.dart';
@@ -17,50 +18,53 @@ class _IntroScreenState extends State<IntroScreen>
   @override
   void initState()
   {
-    // TODO: implement initState
     super.initState();
-    slides.add(
-      new Slide(
-          pathImage:'images/bestintro.jpg',
-          title: 'Find foods you love',
+    SchedulerBinding.instance!.addPostFrameCallback((_)
+    {
+      // Call your function
+      slides.add(
+       new  Slide(
+            pathImage:'images/bestintro.jpg',
+            title: 'Find foods you love',
+            styleTitle: TextStyle(
+                color: Theme.of(context).colorScheme.secondary,fontSize: 25.0,fontFamily: 'Roboto'
+            ),
+            description: 'Discover the best foods form over 1,000 restaurants',
+            styleDescription: TextStyle(
+                color: Colors.grey,fontSize: 14.0
+            ),
+            backgroundColor: Colors.transparent
+        ),
+      );
+      slides.add(
+          Slide(
+            pathImage:'images/bestfastdelivery.jpg',
+            title: 'Fast Delivery',
+            styleTitle: TextStyle(
+                color: Theme.of(context).colorScheme.secondary,fontSize: 25.0,fontFamily: 'Roboto'
+            ),
+            description:'Fast delivery to your home, office and wherever you are',
+            styleDescription: TextStyle(
+                color: Colors.grey,fontSize: 14.0
+            ),
+            backgroundColor: Colors.transparent,
+          )
+      );
+      slides.add(
+        Slide(
+          pathImage: 'images/location.jpg',
+          title:'Live Tracking' ,
           styleTitle: TextStyle(
               color: Theme.of(context).colorScheme.secondary,fontSize: 25.0,fontFamily: 'Roboto'
           ),
-          description: 'Discover the best foods form over 1,000 restaurants',
+          description:'Real time tracking of your food on the app after ordered',
           styleDescription: TextStyle(
               color: Colors.grey,fontSize: 14.0
           ),
-          backgroundColor: Colors.transparent
-      ),
-    );
-    slides.add(
-        new Slide(
-          pathImage:'images/bestfastdelivery.jpg',
-          title: 'Fast Delivery',
-          styleTitle: TextStyle(
-              color: Theme.of(context).colorScheme.secondary,fontSize: 25.0,fontFamily: 'Roboto'
-          ),
-          description:'Fast delivery to your home, office and wherever you are',
-          styleDescription: TextStyle(
-            color: Colors.grey,fontSize: 14.0
-          ),
           backgroundColor: Colors.transparent,
-        )
-    );
-    slides.add(
-       Slide(
-        pathImage: 'images/location.jpg',
-        title:'Live Tracking' ,
-        styleTitle: TextStyle(
-            color: Theme.of(context).colorScheme.secondary,fontSize: 25.0,fontFamily: 'Roboto'
         ),
-        description:'Real time tracking of your food on the app after ordered',
-        styleDescription: TextStyle(
-          color: Colors.grey,fontSize: 14.0
-        ),
-        backgroundColor: Colors.transparent,
-      ),
-    );
+      );
+    });
   }
   @override
   Widget build(BuildContext context)
@@ -90,12 +94,12 @@ class _IntroScreenState extends State<IntroScreen>
       body:
       Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min,
+
         children:<Widget> [
           Expanded(
             child:
             IntroSlider(
-              slides: this.slides,
+              slides: slides,
               colorActiveDot: Theme.of(context).colorScheme.secondary,
               colorDot: Colors.grey,
               sizeDot: 10.0,
@@ -104,6 +108,7 @@ class _IntroScreenState extends State<IntroScreen>
               backgroundColorAllSlides: Colors.transparent,
             ),
           ),
+          SizedBox(height: 5.0),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15.0),
             child: Container(

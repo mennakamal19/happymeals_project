@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:happymeals_project/filters.dart';
 import 'package:happymeals_project/main_restaurant.dart';
 import 'package:happymeals_project/support_center.dart';
 
@@ -39,7 +40,7 @@ class _RestaurantsState extends State<Restaurants> {
                             hintText: 'Search',
                             fillColor: Colors.grey[300],
                             filled: true,
-                            prefixIcon: Icon(Icons.search),
+                            prefixIcon: Icon(Icons.search,color: Theme.of(context).colorScheme.secondary,),
                             border: OutlineInputBorder(
                                 borderSide: BorderSide.none,
                                 borderRadius: BorderRadius.circular(20)
@@ -54,7 +55,7 @@ class _RestaurantsState extends State<Restaurants> {
                   onPressed: ()
 
                   {
-                    Navigator.push(context, MaterialPageRoute(builder: (ctx)=>Support()));
+                    Navigator.push(context, MaterialPageRoute(builder: (ctx)=>Filters()));
                   },
                 )
               ],

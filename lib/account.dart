@@ -12,7 +12,7 @@ class Account extends StatefulWidget {
 
 class _AccountState extends State<Account>
 {
-  late Map userData;
+  Map userData = <String, dynamic>{};
   late String id;
   @override
   void initState() {
@@ -24,7 +24,7 @@ class _AccountState extends State<Account>
   Widget build(BuildContext context)
   {
     return Scaffold(
-      body:
+      body: userData.isNotEmpty?
       Column(
         children:<Widget> [
           Expanded(
@@ -155,11 +155,14 @@ class _AccountState extends State<Account>
                             'Settings'
                         ),
                       ),
-                      // IconButton(
-                      //   icon: Icon(Icons.keyboard_arrow_right,
-                      //     color: Colors.black,), onPressed: () =>Navigator.push(context, MaterialPageRoute(builder: (ctx)=>Setting())
-                      // ),
-                      // )
+                      IconButton(
+                        icon: Icon(Icons.keyboard_arrow_right,
+                          color: Colors.black,),
+                        onPressed: ()
+                        {
+                         // Navigator.push(context, MaterialPageRoute(builder: (ctx)=>Setting()));
+                        }
+                      )
                     ],
                   ),
                   Divider(
@@ -226,7 +229,7 @@ class _AccountState extends State<Account>
             ),
           ),
         ],
-      ),
+      ):Center(child: CircularProgressIndicator(color: Theme.of(context).colorScheme.secondary,))
     );
   }
   getData() async

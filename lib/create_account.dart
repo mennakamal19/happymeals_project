@@ -27,7 +27,7 @@ class _CreateAccountState extends State<CreateAccount>
           backgroundColor: Colors.grey[100],
           shadowColor: Colors.transparent,
           leading: Icon(Icons.arrow_back_ios,
-            color: Colors.black,)
+            color: Colors.black,size: 18.0,)
       ),
       body: SingleChildScrollView(
         child: Column(

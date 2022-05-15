@@ -223,14 +223,15 @@ class _CheckOutState extends State<CheckOut> {
   }
   getTotal(List myBasket)
   {
-    var sum;
-    for (var i = 0; i < myBasket.length; i++) {
+    var sum=0;
+    var total =0 ;
+    for (var i = 0; i < myBasket.length; i++)
+    {
       sum = int.parse(myBasket[i]!['price']);
-      sum += sum;
+      total = total +sum;
     }
     setState(() {
-      subTotal = sum.toString();
-      print(subTotal);
+      subTotal = total.toString();
     });
   }
 }

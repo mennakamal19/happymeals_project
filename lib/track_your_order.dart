@@ -30,10 +30,11 @@ class _TrackOrderState extends State<TrackOrder> {
               child: Row(children: [
                 Text(
                   'Chat',style: TextStyle(
-                    color: HexColor('#68B2A0')
+                    color:Theme.of(context).colorScheme.secondary
                 ),
                 ),
-                Icon(Icons.maps_ugc,color:  HexColor('#68B2A0'),)
+                SizedBox(width: 4.0),
+                Icon(Icons.maps_ugc,color:  Theme.of(context).colorScheme.secondary,)
               ],
               ),
             ),
@@ -49,7 +50,7 @@ class _TrackOrderState extends State<TrackOrder> {
             ),
             Text(
               '12:30PM',style: TextStyle(
-                color: HexColor('#68B2A0'),fontSize: 20,fontWeight: FontWeight.bold
+                color: Theme.of(context).colorScheme.secondary,fontSize: 20,fontWeight: FontWeight.bold
             ),
             ),
             Divider(),

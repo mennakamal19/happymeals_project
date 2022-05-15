@@ -33,7 +33,7 @@ class _FiltersState extends State<Filters> {
             padding: const EdgeInsets.all(8.0),
             child: Text('Reset',
               style: TextStyle(color: Colors.black,
-                  fontSize: 16
+                  fontSize: 15
               ),
             ),
           ),
@@ -308,6 +308,7 @@ class _FiltersState extends State<Filters> {
               min: 0.00,
               max: 100.00,
               showLabels: true,
+              activeColor: Theme.of(context).colorScheme.secondary,
               numberFormat: NumberFormat('\$'),
               enableTooltip: true,
               onChanged: (dynamic newRange)
@@ -324,7 +325,7 @@ class _FiltersState extends State<Filters> {
                 width: double.infinity,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(50.0),
-                  color: Colors.deepOrangeAccent,
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
                 clipBehavior: Clip.antiAliasWithSaveLayer,
                 child: TextButton(

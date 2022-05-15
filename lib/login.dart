@@ -4,7 +4,6 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:happymeals_project/create_account.dart';
 import 'package:happymeals_project/forget_password.dart';
 import 'package:happymeals_project/home.dart';
-import 'package:hexcolor/hexcolor.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Login extends StatefulWidget {
@@ -25,7 +24,7 @@ class _LoginState extends State<Login> {
           backgroundColor: Colors.transparent,
           shadowColor: Colors.transparent,
           leading: Icon(Icons.arrow_back_ios,
-            color: Colors.black,)
+            color: Colors.black,size: 18,)
       ),
       backgroundColor: Colors.grey[100],
       body: Column(
@@ -35,7 +34,7 @@ class _LoginState extends State<Login> {
             padding: const EdgeInsets.only(left: 40.0),
             child: Text('Log in to your\naccount',
               style: TextStyle(
-                  color: HexColor('#68B2A0'),
+                  color: Theme.of(context).colorScheme.secondary,
                   fontSize: 24.0
               ),
             ),
@@ -49,7 +48,7 @@ class _LoginState extends State<Login> {
                 children:<Widget> [
                   TextFormField(
                       controller: email,
-                      cursorColor: HexColor('#68B2A0'),
+                      cursorColor: Theme.of(context).colorScheme.secondary,
                       decoration: InputDecoration(
                           hintText: 'Email',
                           fillColor: Colors.white,
@@ -72,7 +71,7 @@ class _LoginState extends State<Login> {
                   SizedBox(height: 10.0,),
                   TextFormField(
                       controller: password,
-                      cursorColor: HexColor('#68B2A0'),
+                      cursorColor: Theme.of(context).colorScheme.secondary,
                       obscureText: true,
                       decoration: InputDecoration(
                           hintText: 'Password',
@@ -80,7 +79,7 @@ class _LoginState extends State<Login> {
                           filled: true,
                           contentPadding: EdgeInsets.all(12.0),
                           suffixText: 'Forget ?',
-                          suffixStyle: TextStyle(color: HexColor('#68B2A0')),
+                          suffixStyle: TextStyle(color: Theme.of(context).colorScheme.secondary),
                           suffixIcon: IconButton(
                             icon: Icon(Icons.keyboard_arrow_right,color: Theme.of(context).colorScheme.secondary,),
                             onPressed: ()
@@ -111,7 +110,7 @@ class _LoginState extends State<Login> {
             child: Container(
               width: double.infinity,
               decoration: BoxDecoration(
-                  color: HexColor('#68B2A0'),
+                  color: Theme.of(context).colorScheme.secondary,
                   borderRadius: BorderRadius.circular(50.0)
               ),
               clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -161,7 +160,7 @@ class _LoginState extends State<Login> {
                     Navigator.push(context, MaterialPageRoute(builder: (ctx)=>CreateAccount()));
                   },
                   child: Text('Sign up',style: TextStyle(
-                      color: HexColor('#68B2A0')
+                      color: Theme.of(context).colorScheme.secondary
                   ),
                   ),
                 ),

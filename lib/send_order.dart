@@ -137,7 +137,7 @@ class _SendOrderState extends State<SendOrder> {
                   child: Text('Discount'
                   ),
                 ),
-                Text('15'+' Eg',style: TextStyle(fontWeight: FontWeight.bold),)
+                Text('0'+' Eg',style: TextStyle(fontWeight: FontWeight.bold),)
               ],
             ),
             Padding(
@@ -185,9 +185,9 @@ class _SendOrderState extends State<SendOrder> {
     var result;
     if(delivery_cost == 'Free')
     {
-      result = (int.parse(total) -15).toString();
+      result = (int.parse(total) ).toString();
     }else{
-      result = ((int.parse(total)+int.parse(delivery_cost))-15).toString();
+      result = ((int.parse(total)+int.parse(delivery_cost))).toString();
     }
     setState(() {
       finalTotal = result;

@@ -15,8 +15,8 @@ class _SupportState extends State<Support> {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         titleSpacing: 0.0,
-        leading: IconButton(icon: Icon(Icons.arrow_back_ios_rounded,size: 16,), onPressed: ()=>Navigator.pop(context),),
-        title: Text('Support',style: TextStyle(fontSize: 17),),
+        leading: IconButton(icon: Icon(Icons.arrow_back_ios_rounded,size: 16,color: Colors.black,), onPressed: ()=>Navigator.pop(context),),
+        title: Text('Support',style: TextStyle(fontSize: 17,color: Colors.black),),
         backgroundColor: Colors.transparent,
         shadowColor: Colors.transparent,
       ),

@@ -24,9 +24,9 @@ class _SupportChatState extends State<SupportChat> {
       appBar: AppBar(
         shadowColor: Colors.transparent,
         backgroundColor: Colors.transparent,
-        title: Text('Support',style: TextStyle(fontSize: 16),),
+        title: Text('Support Center',style: TextStyle(fontSize: 16,color: Colors.black),),
         titleSpacing: 0.0,
-        leading: IconButton(icon: Icon(Icons.arrow_back_ios_rounded,size: 16,), onPressed: ()=>Navigator.pop(context),),
+        leading: IconButton(icon: Icon(Icons.arrow_back_ios_rounded,size: 16,color: Colors.black,), onPressed: ()=>Navigator.pop(context),),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
