@@ -15,12 +15,13 @@ class _TrackOrderState extends State<TrackOrder> {
       appBar: AppBar(
         shadowColor: Colors.transparent,
         backgroundColor: Colors.transparent,
-        leading: IconButton(icon: Icon(Icons.arrow_back_ios_rounded,size: 16,),
+        leading: IconButton(icon: Icon(Icons.arrow_back_ios_rounded,size: 16,color: Colors.black,),
           onPressed: () => Navigator.pop(context),
         ),
         titleSpacing: 0.0,
-        title: Text(
-          'Track your order',style: TextStyle(fontSize: 16),
+        title: const Text(
+          'Track your order',
+          style: TextStyle(fontSize: 16,color: Colors.black),
         ),
         actions: [
           InkWell(
